@@ -12,12 +12,14 @@
 <script src="matreshka-binder-codemirror.min.js"></script>
 <script>
 const obj = {};
+obj.code = document.documentElement.innerHTML;
+  
 Matreshka.bindNode(obj, 'code', 'textarea', Matreshka.binders.codeMirror({
     lineNumbers: true,
     mode: 'htmlmixed'
 }));
 
-obj.code = document.documentElement.innerHTML;
+
 </script>
 </body>
 </html>
