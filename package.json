@@ -1,6 +1,6 @@
 {
   "name": "matreshka-binder-codemirror",
-  "version": "0.0.0-auto",
+  "version": "0.0.0",
   "description": "CodeMirror binder for Matreshka.js",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "bundle": "webpack",
     "release-npm": "npm run compile-npm && npm publish",
     "release-bundle": "rimraf bundle && deploy-to-git",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre && npm run release-npm && semantic-release post",
     "commit": "git-cz"
   },
   "config": {
