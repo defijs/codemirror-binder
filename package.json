@@ -69,6 +69,7 @@
     "codemirror": "^5.20.0",
     "conventional-changelog": "^1.1.0",
     "coveralls": "^2.11.14",
+    "deploy-to-git": "^0.1.1",
     "eslint": "^3.8.1",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
