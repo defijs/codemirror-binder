@@ -9,12 +9,13 @@ describe('Common', () => {
     let textarea;
 
     const getCodeMirrorInstance = () => {
-        if(textarea.nextElementSibling) {
+        if (textarea.nextElementSibling) {
             return textarea.nextElementSibling.CodeMirror;
         }
         return null;
     };
     beforeEach(() => {
+        const { document } = window;
         obj = {};
         textarea = document.body.appendChild(document.createElement('textarea'));
     });
@@ -44,7 +45,6 @@ describe('Common', () => {
 
         expect(textarea.value).toEqual('');
         expect(getCodeMirrorInstance()).toEqual(null);
-
     });
 
     it('allows to pass config', () => {
