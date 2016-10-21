@@ -1,17 +1,57 @@
+import bindNode from 'matreshka/bindnode';
+import unbindNode from 'matreshka/unbindnode';
+import codeMirror from '../../src';
+
+const noDebounceFlag = { debounceGetValue: false, debounceSetValue: false };
 
 describe('Common', () => {
+    let obj;
     let textarea;
-    let codeMirrorInstance;
+
+    const getCodeMirrorInstance = () => {
+        if(textarea.nextElementSibling) {
+            return textarea.nextElementSibling.CodeMirror;
+        }
+        return null;
+    };
     beforeEach(() => {
-        //textarea = document.createElement('textarea');
-        //codeMirrorInstance = textarea.nextElementSibling.CodeMirror;
+        obj = {};
+        textarea = document.body.appendChild(document.createElement('textarea'));
     });
 
-    it('should update textarea when property is changed', () => {
-        expect(true).toEqual(true)
+    it('should update textarea and CodeMirror when bound property is changed', () => {
+        bindNode(obj, 'x', textarea, codeMirror(), noDebounceFlag);
+        obj.x = 'foo';
+
+        expect(textarea.value).toEqual(obj.x);
+        expect(getCodeMirrorInstance().getValue()).toEqual(obj.x);
     });
-    xit('should update CodeMirror when property is changed', () => {});
-    xit('should update property when textarea is changed', () => {});
-    xit('should update property when CodeMirror is changed', () => {});
-    xit('should destroy when unbindNode is called', () => {});
+
+    it('should update property and textarea value when CodeMirror is changed', () => {
+        bindNode(obj, 'x', textarea, codeMirror(), noDebounceFlag);
+
+        getCodeMirrorInstance().setValue('foo');
+
+        expect(textarea.value).toEqual(obj.x);
+        expect(getCodeMirrorInstance().getValue()).toEqual(obj.x);
+    });
+
+    it('should destroy when unbindNode is called', () => {
+        bindNode(obj, 'x', textarea, codeMirror(), noDebounceFlag);
+        unbindNode(obj, 'x', textarea);
+
+        obj.x = 'foo';
+
+        expect(textarea.value).toEqual('');
+        expect(getCodeMirrorInstance()).toEqual(null);
+
+    });
+
+    it('allows to pass config', () => {
+        bindNode(obj, 'x', textarea, codeMirror({
+            foo: 'bar'
+        }), noDebounceFlag);
+
+        expect(getCodeMirrorInstance().getOption('foo')).toEqual('bar');
+    });
 });

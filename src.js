@@ -18,6 +18,11 @@ function codeMirrorBinder(config) {
             instance.save();
         },
         initialize() {
+            if(!this.parentNode) {
+                throw new Error('parentNode isn\'n found'
+                    + ' you need to insert textarea into the document before binder use');
+            }
+
             instance = CodeMirror.fromTextArea(this, config);
         },
         destroy() {
