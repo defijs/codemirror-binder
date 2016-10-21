@@ -9,17 +9,17 @@
   <body>
     <textarea></textarea>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.2/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.2/mode/javascript/javascript.js"></script>
 
     <script src="https://matreshkajs.github.io/matreshka/matreshka.js"></script>
     <script src="matreshka-binder-codemirror.min.js"></script>
     <script>
       const obj = {};
-      obj.code = document.documentElement.outerHTML;
+      obj.code = 'alert('Hello World!')';
 
       Matreshka.bindNode(obj, 'code', 'textarea', Matreshka.binders.codeMirror({
           lineNumbers: true,
-          mode: 'htmlmixed'
+          mode: 'javascript'
       }));
     </script>
   </body>
