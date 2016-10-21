@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.2/codemirror.css"> 
-</head>
-<body>
-<textarea></textarea>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.0/codemirror.min.js"></script>
-<script src="https://matreshkajs.github.io/matreshka/matreshka.js"></script>
-<script src="matreshka-binder-codemirror.min.js"></script>
-<script>
-const obj = {};
-obj.code = document.documentElement.innerHTML;
-  
-Matreshka.bindNode(obj, 'code', 'textarea', Matreshka.binders.codeMirror({
-    lineNumbers: true,
-    mode: 'htmlmixed'
-}));
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.2/codemirror.css"> 
+  </head>
 
+  <body>
+    <textarea></textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.2/mode/htmlmixed/htmlmixed.min.js"></script>
 
-</script>
-</body>
+    <script src="https://matreshkajs.github.io/matreshka/matreshka.js"></script>
+    <script src="matreshka-binder-codemirror.min.js"></script>
+    <script>
+      const obj = {};
+      obj.code = document.documentElement.outerHTML;
+
+      Matreshka.bindNode(obj, 'code', 'textarea', Matreshka.binders.codeMirror({
+          lineNumbers: true,
+          mode: 'htmlmixed'
+      }));
+    </script>
+  </body>
 </html>
