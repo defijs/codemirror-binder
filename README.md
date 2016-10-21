@@ -11,10 +11,9 @@ In **browser environment** (or whatever environment where ``Matreshka`` is globa
 
 ```js
 const { codeMirror } = Matreshka.binders;
-// ...gi
 this.bindNode('code', textarea, codeMirror());
 
-// if you don't want to create variables
+// if you don't want to create the variable
 this.bindNode('code', textarea, Matreshka.binders.codeMirror());
 
 obj.code = 'alert("Hello World!");';
@@ -31,7 +30,6 @@ npm install --save matreshka-binder-codemirror
 ```
 
 ```js
-// import all binders
 const codeMirror = require('matreshka-binder-codemirror');
 
 // ...
