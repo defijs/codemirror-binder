@@ -15,7 +15,7 @@
     <script src="matreshka-binder-codemirror.min.js"></script>
     <script>
       const obj = {};
-      obj.code = 'alert('Hello World!')';
+      obj.code = 'alert("Hello World!");';
 
       Matreshka.bindNode(obj, 'code', 'textarea', Matreshka.binders.codeMirror({
           lineNumbers: true,
