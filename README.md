@@ -1,4 +1,4 @@
-# matreshka-binder-codemirror
+# matreshka-binder-codemirror [![npm version](https://badge.fury.io/js/matreshka-binder-codemirror.svg)](https://badge.fury.io/js/matreshka-binder-codemirror) [![Build Status](https://travis-ci.org/matreshkajs/matreshka-binder-codemirror.svg?branch=master)](https://travis-ci.org/matreshkajs/matreshka-binder-codemirror) [![Coverage Status](https://coveralls.io/repos/github/matreshkajs/matreshka-binder-codemirror/badge.svg?branch=master)](https://coveralls.io/github/matreshkajs/matreshka-binder-codemirror?branch=master)
 > [CodeMirror](http://codemirror.net/) binder creator for Matreshka.js
 
 The binder creator returns a binder which initializes and binds CodeMirror instance to a property.
@@ -11,7 +11,7 @@ In **browser environment** (or whatever environment where ``Matreshka`` is globa
 
 ```js
 const { codeMirror } = Matreshka.binders;
-// ...
+// ...gi
 this.bindNode('code', node, codeMirror());
 
 // if you don't want to create variables
