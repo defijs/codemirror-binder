@@ -10,7 +10,8 @@ This branch contains minified bundle of [matreshka-binder-codemirror](https://gi
 
 ```html
 <!-- do not do this on production -->
-<script src="https://matreshkajs.github.io/matreshka-binder-codemirror/matreshka-binder-codemirror.min.js">
+<script
+ src="https://matreshkajs.github.io/matreshka-binder-codemirror/matreshka-binder-codemirror.min.js">
 </script>
 ```
 
