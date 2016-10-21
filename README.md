@@ -1,5 +1,5 @@
 # matreshka-binder-codemirror
-CodeMirror binder creator for Matreshka.js
+> [CodeMirror](http://codemirror.net/) binder creator for Matreshka.js
 
 The binder creator returns a binder which initializes and binds CodeMirror instance to a property.
 
@@ -40,7 +40,7 @@ this.bindNode('code', node, codeMirror());
 
 ### Configuration
 
-The function accepts one argument: configuration object which is passed to internal call of ``CodeMirror.fromTextArea``. Read the documentation to CodeMirror for more info.
+The function accepts one argument: configuration object which is passed into internal call of ``CodeMirror.fromTextArea``. Read the CodeMirror documentation for more info.
 
 ```js
 this.bindNode('code', node, codeMirror({
