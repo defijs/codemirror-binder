@@ -12,12 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.20.2/mode/javascript/javascript.js"></script>
 
     <script src="https://matreshkajs.github.io/matreshka/matreshka.js"></script>
-    <script src="matreshka-binder-codemirror.min.js"></script>
+    <script src="codemirror-binder.min.js"></script>
     <script>
       const obj = {};
       obj.code = 'alert("Hello World!");';
 
-      Matreshka.bindNode(obj, 'code', 'textarea', Matreshka.binders.codeMirror({
+      Matreshka.bindNode(obj, 'code', 'textarea', codeMirrorBinder({
           lineNumbers: true,
           mode: 'javascript'
       }));
