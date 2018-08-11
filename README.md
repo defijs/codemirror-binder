@@ -1,17 +1,17 @@
-# matreshka-binder-codemirror bundle
+# codemirror-binder bundle
 
-This branch contains minified bundle of [matreshka-binder-codemirror](https://github.com/matreshkajs/matreshka-binder-codemirror).
+This branch contains minified bundle of [codemirror-binder](https://github.com/matreshkajs/codemirror-binder).
 
-[Demo](https://matreshkajs.github.io/matreshka-binder-codemirror/demo.html)
+[Demo](https://matreshkajs.github.io/codemirror-binder/demo.html)
 
 ```html
-<script src="matreshka-binder-codemirror.min.js"></script>
+<script src="codemirror-binder.min.js"></script>
 ```
 
 ```html
 <!-- do not do this on production -->
 <script
- src="https://matreshkajs.github.io/matreshka-binder-codemirror/matreshka-binder-codemirror.min.js">
+ src="https://matreshkajs.github.io/codemirror-binder/codemirror-binder.min.js">
 </script>
 ```
 
