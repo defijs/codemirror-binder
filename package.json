@@ -1,7 +1,7 @@
 {
-  "name": "matreshka-binder-codemirror",
+  "name": "codemirror-binder",
   "version": "0.0.0-auto",
-  "description": "CodeMirror binder for Matreshka.js",
+  "description": "CodeMirror binder for Matreshka.js and defi.js",
   "main": "index.js",
   "scripts": {
     "test": "npm run cover && npm run lint",
