@@ -16,6 +16,7 @@
     "semantic-release": "semantic-release pre && npm run release-bundle && npm publish && semantic-release post",
     "commit": "git-cz"
   },
+  "release": {},
   "config": {
     "deployToGit": {
       "repository": "https://$GH_TOKEN@github.com/matreshkajs/codemirror-binder.git",
