@@ -19,7 +19,7 @@ function codeMirrorBinder(config) {
         },
         initialize() {
             /* istanbul ignore if */
-            if(!this.parentNode) {
+            if (!this.parentNode) {
                 throw new Error('parentNode isn\'n found'
                     + ' you need to insert textarea into the document before binder use');
             }
@@ -38,7 +38,7 @@ module.exports = codeMirrorBinder;
 // extend binders object in browser environment
 /* istanbul ignore if */
 if (typeof Matreshka === 'function') {
-    const { binders } = Matreshka;
+    const { binders } = Matreshka; // eslint-disable-line no-undef
 
     binders.codeMirror = codeMirrorBinder;
 }
