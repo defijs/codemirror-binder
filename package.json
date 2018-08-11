@@ -18,7 +18,7 @@
   },
   "config": {
     "deployToGit": {
-      "repository": "https://$GH_TOKEN@github.com/matreshkajs/matreshka-binder-codemirror.git",
+      "repository": "https://$GH_TOKEN@github.com/matreshkajs/codemirror-binder.git",
       "branch": "gh-pages",
       "folder": "bundle",
       "script": "npm run bundle",

@@ -13,7 +13,7 @@ module.exports = {
     },
     output: {
         path: `${__dirname}/bundle`,
-        filename: 'matreshka-binder-codemirror.min.js',
+        filename: 'codemirror-binder.min.js',
         libraryTarget: 'umd'
     },
     module: {
