@@ -34,11 +34,3 @@ function codeMirrorBinder(config) {
 }
 
 module.exports = codeMirrorBinder;
-
-// extend binders object in browser environment
-/* istanbul ignore if */
-if (typeof Matreshka === 'function') {
-    const { binders } = Matreshka; // eslint-disable-line no-undef
-
-    binders.codeMirror = codeMirrorBinder;
-}

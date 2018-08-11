@@ -14,7 +14,8 @@ module.exports = {
     output: {
         path: `${__dirname}/bundle`,
         filename: 'codemirror-binder.min.js',
-        libraryTarget: 'umd'
+        libraryTarget: 'umd',
+        library: 'codeMirrorBinder'
     },
     module: {
         rules: [

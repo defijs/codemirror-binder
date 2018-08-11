@@ -1,7 +1,7 @@
 # codemirror-binder [![npm version](https://badge.fury.io/js/codemirror-binder.svg)](https://badge.fury.io/js/codemirror-binder) [![Build Status](https://travis-ci.org/matreshkajs/codemirror-binder.svg?branch=master)](https://travis-ci.org/matreshkajs/codemirror-binder) [![Coverage Status](https://coveralls.io/repos/github/matreshkajs/codemirror-binder/badge.svg?branch=master)](https://coveralls.io/github/matreshkajs/codemirror-binder?branch=master)
 > [CodeMirror](http://codemirror.net/) binder creator for Matreshka.js and defi.js
 
-The binder creator returns a binder which initializes and binds CodeMirror instance created with ``fromTextArea`` function to a property.
+The binder creator returns a binder which initializes and binds CodeMirror instance (created using ``fromTextArea`` function) to a property.
 
 ## Usage
 
@@ -11,32 +11,32 @@ npm install --save codemirror-binder
 
 ```js
 import { bindNode } from 'matreshka'; // or import { bindNode } from 'defi';
-import codeMirror from 'codemirror-binder';
+import codeMirrorBinder from 'codemirror-binder';
 
 // ...
 const obj = {};
-bindNode(obj, 'code', textarea, codeMirror());
+bindNode(obj, 'code', textarea, codeMirrorBinder());
+
+this.bindNode('code', textarea, codeMirrorBinder()); // for Matreshka class instances
 ```
 
 
-### Usage with Matreshka.js in a browser environment
+### Usage in a browser environment
 
 For non-CJS environment the bundle can be downloaded at [gh-pages branch](https://github.com/matreshkajs/codemirror-binder/tree/gh-pages).
 
-In **browser environment** (or whatever environment where ``Matreshka`` is global variable)  ``Matreshka.binders`` namespace is extended.
+In the browser environment the scripts exports a global variable `codeMirrorBinder`.
 
 ```html
 <script src="path/to/codemirror-binder.min.js"></script>
 ```
 
 ```js
-const { codeMirror } = Matreshka.binders;
-this.bindNode('code', textarea, codeMirror());
+defi.bindNode(obj, 'code', textarea, codeMirrorBinder()); // for defi
 
-// if you don't want to create the variable
-this.bindNode('code', textarea, Matreshka.binders.codeMirror());
+Matreshka.bindNode(obj, 'code', textarea, codeMirrorBinder()); // for Matreshka + custom objects
 
-this.code = 'alert("Hello World!");';
+this.bindNode('code', textarea, codeMirrorBinder()); // for Matreshka class instances
 ```
 
 -------------
