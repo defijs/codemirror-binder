@@ -14,8 +14,8 @@
     "prepublish": "npm run compile-npm",
     "release-bundle": "rimraf bundle && deploy-to-git",
     "commit": "git-cz",
-    "patch": "npm version patch && npm run release-bundle && npm publish",
-    "minor": "npm version minor && npm run release-bundle && npm publish"
+    "patch": "npm t && npm version patch && npm run release-bundle && npm publish",
+    "minor": "npm t && npm version minor && npm run release-bundle && npm publish"
   },
   "config": {
     "deployToGit": {
