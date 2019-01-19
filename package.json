@@ -1,6 +1,6 @@
 {
   "name": "codemirror-binder",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "CodeMirror binder for Matreshka.js and defi.js",
   "main": "index.js",
   "scripts": {
