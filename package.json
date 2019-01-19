@@ -1,6 +1,6 @@
 {
   "name": "codemirror-binder",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "CodeMirror binder for defi.js",
   "main": "index.js",
   "scripts": {
