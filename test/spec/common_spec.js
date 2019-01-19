@@ -1,5 +1,5 @@
-import bindNode from 'matreshka/bindnode';
-import unbindNode from 'matreshka/unbindnode';
+import bindNode from 'defi/bindnode';
+import unbindNode from 'defi/unbindnode';
 import codeMirror from '../../src';
 
 const noDebounceFlag = { debounceGetValue: false, debounceSetValue: false };

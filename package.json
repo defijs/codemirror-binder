@@ -1,25 +1,26 @@
 {
   "name": "codemirror-binder",
   "version": "0.0.7",
-  "description": "CodeMirror binder for Matreshka.js and defi.js",
+  "description": "CodeMirror binder for defi.js",
   "main": "index.js",
   "scripts": {
     "test": "npm run cover && npm run lint",
     "cover": "babel-node node_modules/.bin/babel-istanbul cover test/index.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "unit": "babel-node test/index.js",
-    "upgrade": "ncu --upgradeAll && npm install",
+    "upgrade": "ncu --upgradeAll && npm i",
     "lint": "eslint ./test ./src.js ./webpack.config.js",
     "compile-npm": "babel src.js --out-file index.js",
     "bundle": "webpack --mode=production",
     "prepublish": "npm run compile-npm",
     "release-bundle": "rimraf bundle && deploy-to-git",
     "commit": "git-cz",
-    "patch": "npm version patch && npm run release-bundle && npm publish",
-    "minor": "npm version minor && npm run release-bundle && npm publish"
+    "reinstall": "rm -rf node_modules package-lock.json && npm i",
+    "patch": "npm version patch && npm run release-bundle && npm publish && git push && git push --tags",
+    "minor": "npm version minor && npm run release-bundle && npm publish && git push && git push --tags"
   },
   "config": {
     "deployToGit": {
-      "repository": "git@github.com:matreshkajs/codemirror-binder.git",
+      "repository": "git@github.com:defijs/codemirror-binder.git",
       "branch": "gh-pages",
       "folder": "bundle",
       "script": "npm run bundle",
@@ -50,18 +51,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matreshkajs/codemirror-binder.git"
+    "url": "https://github.com/defijs/codemirror-binder.git"
   },
   "keywords": [
-    "matreshkajs",
+    "defijs",
     "codemirror"
   ],
   "author": "Andrey Gubanov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matreshkajs/codemirror-binder/issues"
+    "url": "https://github.com/defijs/codemirror-binder/issues"
   },
-  "homepage": "https://github.com/matreshkajs/codemirror-binder#readme",
+  "homepage": "https://github.com/defijs/codemirror-binder#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/node": "^7.2.2",
@@ -80,7 +81,7 @@
     "ghooks": "^2.0.4",
     "jasmine": "^3.3.1",
     "jsdom": "^13.1.0",
-    "matreshka": "^2.4.0",
+    "defi": "^0.0.29",
     "npm-check-updates": "^2.15.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "validate-commit-msg": "^2.14.0",
@@ -88,6 +89,6 @@
     "webpack-command": "^0.4.2"
   },
   "peerDependencies": {
-    "matreshka": "2.x"
+    "defi": "*"
   }
 }
