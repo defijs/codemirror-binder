@@ -1,8 +1,8 @@
 # codemirror-binder bundle
 
-This branch contains minified bundle of [codemirror-binder](https://github.com/matreshkajs/codemirror-binder).
+This branch contains minified bundle of [codemirror-binder](https://github.com/defijs/codemirror-binder).
 
-[Demo](https://matreshkajs.github.io/codemirror-binder/demo.html)
+[Demo](https://defijs.github.io/codemirror-binder/demo.html)
 
 ```html
 <script src="codemirror-binder.min.js"></script>
@@ -11,7 +11,7 @@ This branch contains minified bundle of [codemirror-binder](https://github.com/m
 ```html
 <!-- do not do this on production -->
 <script
- src="https://matreshkajs.github.io/codemirror-binder/codemirror-binder.min.js">
+ src="https://defijs.github.io/codemirror-binder/codemirror-binder.min.js">
 </script>
 ```
 
