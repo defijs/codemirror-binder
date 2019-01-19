@@ -1,4 +1,4 @@
-import CodeMirror from 'codemirror';
+const CodeMirror = require('codemirror');
 
 function codeMirrorBinder(config) {
     let instance;
