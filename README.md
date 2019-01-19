@@ -23,7 +23,7 @@ bindNode(obj, 'code', textarea, codeMirrorBinder());
 
 For non-CJS environment the bundle can be downloaded at [gh-pages branch](https://github.com/defijs/codemirror-binder/tree/gh-pages).
 
-In the browser environment the scripts exports a global variable `codeMirrorBinder`.
+In the browser environment the script exports a global variable `codeMirrorBinder`.
 
 ```html
 <script src="path/to/codemirror-binder.min.js"></script>
