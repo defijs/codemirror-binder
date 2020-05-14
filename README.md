@@ -1,3 +1,5 @@
+The repository is no longer updated. Defi is turned into a monorepo: https://github.com/finom/defi
+
 # codemirror-binder [![npm version](https://badge.fury.io/js/codemirror-binder.svg)](https://badge.fury.io/js/codemirror-binder) [![Build Status](https://travis-ci.org/defijs/codemirror-binder.svg?branch=master)](https://travis-ci.org/defijs/codemirror-binder) [![Coverage Status](https://coveralls.io/repos/github/defijs/codemirror-binder/badge.svg?branch=master)](https://coveralls.io/github/defijs/codemirror-binder?branch=master)
 
 > [CodeMirror](http://codemirror.net/) binder creator for defi.js
