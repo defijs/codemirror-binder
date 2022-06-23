@@ -80,7 +80,7 @@
     "eslint-plugin-import": "^2.14.0",
     "ghooks": "^2.0.4",
     "jasmine": "^3.3.1",
-    "jsdom": "^13.1.0",
+    "jsdom": "^16.5.0",
     "defi": "^0.0.29",
     "npm-check-updates": "^2.15.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
